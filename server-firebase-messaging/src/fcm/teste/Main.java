@@ -25,12 +25,12 @@ public class Main {
          * to: device token
          * priority: level of priority
          */
-        String jsonMessage = "{ \"to\": \"dOwNeqahfto:APA91bFVuAnxHOsFNt6EbBNE6QULI48jp-0Ge8NbiO4iMoLyPkL-wB4N6j3DSKvADd8imYObvlT7Fjqc35pUJ8LwsBJ7zrVkE6GRQVItDuRcwjRhffudh28cSRBi9Art8-d3uEjT3FY3\", \"priority\": \"high\", \"notification\": { \"title\": \"Java 9 Teste\", \"body\": \"Message from java 9 server.\" } }";
-
+        String jsonMessage = "{ \"to\": \"TOKEN DEVICE\", \"priority\": \"high\", \"notification\": { \"title\": \"Java 9 Teste\", \"body\": \"Message from java 9 server.\" } }";
+        
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://fcm.googleapis.com/fcm/send"))
                 .header("Content-type","application/json")
-                .header("Authorization", "key=AIzaSyDcOG7mCNWe7hnAGLqvPeIUEhQN-pqDhmA")
+                .header("Authorization", "key=CHAVE DO FIREBASE")
                 .POST(HttpRequest.BodyProcessor.fromString(jsonMessage))
                 .build();
 
